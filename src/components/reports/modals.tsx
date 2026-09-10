@@ -25,7 +25,7 @@ function Modal({
       <button
         aria-label="Fechar"
         onClick={onClose}
-        className="absolute inset-0 bg-[color-mix(in_oklab,var(--ink)_55%,transparent)] backdrop-blur-sm"
+        className="absolute inset-0 bg-overlay backdrop-blur-sm"
       />
       <div
         role="dialog"

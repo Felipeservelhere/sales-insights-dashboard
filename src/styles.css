@@ -39,6 +39,7 @@
   --color-glass: var(--glass);
   --color-field: var(--field);
   --color-hover: var(--hover);
+  --color-overlay: var(--overlay);
 
   --color-card: var(--paper);
   --color-card-foreground: var(--ink);
@@ -61,10 +62,10 @@
 [data-theme="light"] {
   --radius: 1rem;
 
-  --background: #f1ebdc;
+  --background: #faf7f1;
   --foreground: #1c1d18;
-  --paper: #f7f2e4;
-  --paper-2: #ece4d1;
+  --paper: #ffffff;
+  --paper-2: #f4efe3;
   --ink: #1c1d18;
   --ink-2: #3b3c34;
   --ink-3: #6a6a5d;
@@ -75,7 +76,8 @@
   --line: rgba(28, 29, 24, 0.1);
   --line-strong: rgba(28, 29, 24, 0.18);
   --glass: rgba(255, 255, 255, 0.28);
-  --field: #fdfaf2;
+  --field: #ffffff;
+  --overlay: rgba(28, 29, 24, 0.45);
   --hover: rgba(28, 29, 24, 0.05);
 
   --shadow-soft: 0 1px 2px rgba(28, 29, 24, 0.05), 0 8px 24px -12px rgba(28, 29, 24, 0.18);
@@ -108,6 +110,7 @@
   --line-strong: rgba(255, 255, 255, 0.18);
   --glass: rgba(255, 255, 255, 0.06);
   --field: #262a32;
+  --overlay: rgba(8, 10, 14, 0.68);
   --hover: rgba(255, 255, 255, 0.06);
 
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
