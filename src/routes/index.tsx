@@ -1,24 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Shell } from "@/components/reports/Shell";
+import { ReportsPage } from "@/components/reports/ReportsPage";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Relatórios de vendas | CSGourmet PDV" },
+      {
+        name: "description",
+        content:
+          "Relatórios de vendas do CSGourmet: faturamento, produtos, caixas, pedidos, clientes, despesas e DRE em um só lugar.",
+      },
+      { property: "og:title", content: "Relatórios de vendas | CSGourmet PDV" },
+      {
+        property: "og:description",
+        content:
+          "Acompanhe faturamento, ticket médio, formas de pagamento e DRE do seu restaurante em tempo real.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <Shell>
+      <ReportsPage />
+    </Shell>
   );
 }
