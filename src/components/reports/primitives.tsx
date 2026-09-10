@@ -20,7 +20,7 @@ const toneClass: Record<Tone, string> = {
   neutral: "bg-paper-2 text-ink-2",
 };
 
-export function Badge({ tone = "neutral", children }: { tone?: Tone; children: ReactNode }) {
+export function Badge({ tone = "neutral", children }: { tone?: Tone | undefined; children: ReactNode }) {
   return <span className={cn("badge-base", toneClass[tone])}>{children}</span>;
 }
 
